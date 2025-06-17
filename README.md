@@ -76,24 +76,17 @@ python -V
 
 通用SDK：同时支持以下板卡
 
--   使用rk3128主芯片的板卡：鲁班猫0H
--   使用rk3528主芯片的板卡：鲁班猫Q1系列
--   使用rk3562主芯片的板卡：鲁班猫1H
--   使用rk3566主芯片的板卡：鲁班猫0系列、鲁班猫1系列
--   使用rk3568主芯片的板卡：鲁班猫2系列
--   使用rk3576主芯片的板卡：鲁班猫3系列
--   使用rk3588s主芯片的板卡：鲁班猫4系列
--   使用rk3588主芯片的板卡：鲁班猫5系列
+-   使用rk3562主芯片的板卡
+-   使用rk3566主芯片的板卡
+-   使用rk3568主芯片的板卡
+-   使用rk3576主芯片的板卡
+-   使用 rk3588s 主芯片的板卡
+-   使用 rk3588 主芯片的板卡
 
-专用SDK：
-
--   RK356x-SDK:使用rk3566、rk3568主芯片的板卡
--   RK3588-SDK:使用rk3588、rk3588s主芯片的板卡
-
-### 拉取通用SDK
+### 拉取SDK
 
 ```
-#github地址(用户使用)
+#github地址
 repo --trace init --depth=1 -u https://github.com/LubanCat/manifests.git -b linux -m lubancat_linux_generic.xml
 
 #内部地址(内部开发使用)
@@ -106,33 +99,10 @@ repo init -u git@gitlab.ebf.local:rockchip/linux/manifests.git -b linux -m luban
 repo --trace init --depth=1 --repo-url https://mirrors.tuna.tsinghua.edu.cn/git/git-repo -u https://github.com/LubanCat/manifests.git -b linux -m lubancat_linux_generic.xml
 ```
 
-
-### 拉取专用SDK
-
-以rk356x为例，如果使用rk3588处理器，将下面命令中的rk356x替换为rk3588
-
-```
-#github地址(用户使用)
-# rk356x
-repo --trace init --depth=1 -u https://github.com/LubanCat/manifests.git -b linux -m rk356x_linux_release.xml
-
-# rk3588
-repo --trace init --depth=1 -u https://github.com/LubanCat/manifests.git -b linux -m rk3588_linux_release.xml
-
-#内部地址(内部开发使用)
-repo init -u git@gitlab.ebf.local:rockchip/linux/manifests.git -b linux -m rk356x_linux_release.xml
-
-#如果运行以上命令失败，提示：fatal: Cannot get https://gerrit.googlesource.com/git-repo/clone.bundle 
-#则可以在以上命令中添加 --repo-url https://mirrors.tuna.tsinghua.edu.cn/git/git-repo 
-#例如：
-
-repo --trace init --depth=1 --repo-url https://mirrors.tuna.tsinghua.edu.cn/git/git-repo -u https://github.com/LubanCat/manifests.git -b linux -m rk356x_linux_release.xml 
-```
-
 ## 更新同步源码
 
 ```
-.repo/repo/repo sync -c -j4
+.repo/repo/repo sync -c -j8
 
 # 使用 --depth=1 拉取源码后，大部分仓库同步后仅有最新的一次提交，可以使用以下命令来获取完整的仓库
 # 进入git仓库内，例如kernel
