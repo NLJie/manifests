@@ -69,7 +69,7 @@ python -V
 -   功能性：通用SDK使用了更新的内核版本，其余源码也更新，有更多新特性
 -   便利性：对于专用SDK来说，一个SOC型号对应一份SDK，SDK在编译中会产生大量缓存数据占据硬盘空间，如果同时使用多个SOC，就需要拉取多份SDK保存在本地，会占用多份空间，而这里面的大部分内容都是相同的，也不得不存储多份。通用SDK就很好的解决了这一问题，一份SDK就可以编译多个不同型号SOC的板卡，有效节省了编译空间。
 -   通用性：由于通用SDK中除了板级配置有差异，其他内容基本都是相同的，不同的位置也做了通用性处理，这就使得我们在开发过程中，一次修改可以应用到所有板卡中，大大减少了重复移植的过程。
--   可维护性：由于LubanCat系列中子系列日益增加，通用SDK同时开发多个soc的特点，有效提升了产品的可维护性，做到对旧产品的超长期维护。
+-   可维护性：由于darkos系列中子系列日益增加，通用SDK同时开发多个soc的特点，有效提升了产品的可维护性，做到对旧产品的超长期维护。
 -   构建命令：通用SDK与专用SDK编译命令基本一致，并且在通用SDK中增加了一些更加便利的命令，如使用make kconfig修改内核配置文件，开发更便利。
 
 ### 板卡支持情况
@@ -87,16 +87,16 @@ python -V
 
 ```
 #github地址
-repo --trace init --depth=1 -u https://github.com/LubanCat/manifests.git -b linux -m lubancat_linux_generic.xml
+repo --trace init --depth=1 -u https://github.com/NLJie/manifests.git -b linux -m darkos_linux_generic.xml
 
 #内部地址(内部开发使用)
-repo init -u git@gitlab.ebf.local:rockchip/linux/manifests.git -b linux -m lubancat_linux_generic.xml
+repo init -u git@gitlab.ebf.local:rockchip/linux/manifests.git -b linux -m darkos_linux_generic.xml
 
 #如果运行以上命令失败，提示：fatal: Cannot get https://gerrit.googlesource.com/git-repo/clone.bundle 
 #则可以在以上命令中添加 --repo-url https://mirrors.tuna.tsinghua.edu.cn/git/git-repo 
 #例如：
 
-repo --trace init --depth=1 --repo-url https://mirrors.tuna.tsinghua.edu.cn/git/git-repo -u https://github.com/LubanCat/manifests.git -b linux -m lubancat_linux_generic.xml
+repo --trace init --depth=1 --repo-url https://mirrors.tuna.tsinghua.edu.cn/git/git-repo -u https://github.com/darkos/manifests.git -b linux -m darkos_linux_generic.xml
 ```
 
 ## 更新同步源码
@@ -162,7 +162,7 @@ Which would you like? [0]:2
 - 各操作系统只有rootfs的构建不同，U-Boot、Kernel都是相同的
 - 生成的镜像保存在 rockdev目录下
 - Ubuntu镜像需单独操作
-- 镜像详细构建流程请查看在线文档《[野火]嵌入式Linux镜像构建与部署—基于LubanCat-RK系列板卡》 https://doc.embedfire.com/linux/rk356x/build_and_deploy/zh/latest/index.html
+- 镜像详细构建流程请查看在线文档《[野火]嵌入式Linux镜像构建与部署—基于darkos-RK系列板卡》 https://doc.embedfire.com/linux/rk356x/build_and_deploy/zh/latest/index.html
 
 ## 常见问题
 
@@ -174,11 +174,11 @@ Which would you like? [0]:2
 
 #### 错误提示1:
 ```
-dev120:~/LubanCat_Linux_SDK$ repo sync -c
+dev120:~/darkos_Linux_SDK$ repo sync -c
 
 ... A new version of repo (2.45) is available.
 ... You should upgrade soon:
-    cp /home/jiawen/LubanCat_Linux_SDK/.repo/repo/repo /home/jiawen/bin/repo
+    cp /home/jiawen/darkos_Linux_SDK/.repo/repo/repo /home/jiawen/bin/repo
 
 fatal: 无效的上游 '2d91fecfd15e5a2c84297bbb1a06fe63e9f69a9c^1'
 
@@ -198,11 +198,11 @@ Repo command failed: UpdateManifestError
 #### 错误提示2:
 
 ```
-dev120:~/LubanCat_Linux_SDK$ repo sync -c
+dev120:~/darkos_Linux_SDK$ repo sync -c
 
 ... A new version of repo (2.45) is available.
 ... You should upgrade soon:
-    cp /home/jiawen/LubanCat_Linux_SDK/.repo/repo/repo /home/jiawen/bin/repo
+    cp /home/jiawen/darkos_Linux_SDK/.repo/repo/repo /home/jiawen/bin/repo
 
 .repo/manifests/: discarding 56 commits removed from upstream
 首先，回退头指针以便在其上重放您的工作...
