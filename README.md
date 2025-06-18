@@ -96,7 +96,7 @@ repo init -u git@gitlab.ebf.local:rockchip/linux/manifests.git -b linux -m darko
 #则可以在以上命令中添加 --repo-url https://mirrors.tuna.tsinghua.edu.cn/git/git-repo 
 #例如：
 
-repo --trace init --depth=1 --repo-url https://mirrors.tuna.tsinghua.edu.cn/git/git-repo -u https://github.com/darkos/manifests.git -b linux -m darkos_linux_generic.xml
+repo --trace init --depth=1 --repo-url https://mirrors.tuna.tsinghua.edu.cn/git/git-repo -u https://github.com/NLJie/manifests.git -b linux -m darkos_linux_generic.xml
 ```
 
 ## 更新同步源码

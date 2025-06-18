@@ -4,11 +4,11 @@
   <include name="remote.xml"/>
   
   <!-- Rockchip设备项目 -->
-  <!-- <project name="device_rockchip" path="device/rockchip" revision="3c7eaeda299d1aa87dac1a73e0ff089089a0ebb6" dest-branch="main" clone-depth="1">
+  <project name="device_rockchip" path="device/rockchip" revision="3c7eaeda299d1aa87dac1a73e0ff089089a0ebb6" dest-branch="main" clone-depth="1">
     <linkfile src="common/scripts/build.sh" dest="build.sh"/>
     <linkfile src="common/Makefile" dest="Makefile"/>
     <linkfile src="common/scripts/rkflash.sh" dest="rkflash.sh"/>
-  </project> -->
+  </project>
   
   <!-- ARM GCC编译器项目 -->
   <project name="gcc-arm-10.3-2021.07-x86_64-aarch64-none-linux-gnu" path="prebuilts/gcc/linux-x86/aarch64/gcc-arm-10.3-2021.07-x86_64-aarch64-none-linux-gnu" revision="adbb295a970c4b39dc487c95226fe84d2c460072" clone-depth="1"/>
