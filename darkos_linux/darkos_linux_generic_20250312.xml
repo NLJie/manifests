@@ -17,7 +17,7 @@
   <project name="gcc-arm-10.3-2021.07-x86_64-arm-none-linux-gnueabihf" path="prebuilts/gcc/linux-x86/arm/gcc-arm-10.3-2021.07-x86_64-arm-none-linux-gnueabihf" revision="2e89382ca3f8c34086272509ae4d7a5c340ffafc" clone-depth="1"/>
   
   <!-- RK二进制文件项目 -->
-  <!-- <project name="rkbin" revision="refs/tags/lbc-stan-rkr5" clone-depth="1"/> -->
+  <project name="rkbin" revision="refs/tags/darkos-stan-rkr5" clone-depth="1"/>
   
   <!-- 工具项目 -->
   <project name="tools" revision="refs/tags/darkos-stan-rkr5" clone-depth="1"/>
