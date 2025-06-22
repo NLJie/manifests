@@ -24,4 +24,8 @@
   
   <!-- U-Boot引导加载程序项目 -->
   <project name="u-boot" revision="refs/tags/darkos-stan-rkr5" clone-depth="1"/>
+
+  <!-- Ubuntu22.04 文件系统 -->
+  <project name="ubuntu" revision="d54806247ccc3db3230d234bb9d91ad4738ac3f0" dest-branch="ubuntu22.04" clone-depth="1"/>
+  
 </manifest>
