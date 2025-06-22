@@ -4,7 +4,7 @@
   <include name="remote.xml"/>
   
   <!-- Rockchip设备项目 -->
-  <project name="device_rockchip" path="device/rockchip" revision="60bba6f833e039da03bfb8b2632120ddddd2a28d" dest-branch="master" clone-depth="1">
+  <project name="device_rockchip" path="device/rockchip" revision="1d2a6ba0c7bb2ced7d65ad6e3476dcc90d0043d0" dest-branch="master" clone-depth="1">
     <linkfile src="common/scripts/build.sh" dest="build.sh"/>
     <linkfile src="common/Makefile" dest="Makefile"/>
     <linkfile src="common/scripts/rkflash.sh" dest="rkflash.sh"/>
