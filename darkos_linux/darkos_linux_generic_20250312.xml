@@ -10,7 +10,7 @@
     <linkfile src="common/scripts/rkflash.sh" dest="rkflash.sh"/>
   </project>
   <!-- 内核 Linux-5.10 -->
-  <project name="kernel" path="kernel-5.10" revision="d11a5354cb59c5ad3aa68dd09fd821189e7df771" dest-branch="darkos-develop-5.10" clone-depth="1"/>
+  <project name="kernel" path="kernel-5.10" revision="61900db05c2b2ed7e196c3ec62324b4e0f40b21f" dest-branch="darkos-develop-5.10" clone-depth="1"/>
 
   <!-- ARM GCC编译器项目 -->
   <project name="gcc-arm-10.3-2021.07-x86_64-aarch64-none-linux-gnu" path="prebuilts/gcc/linux-x86/aarch64/gcc-arm-10.3-2021.07-x86_64-aarch64-none-linux-gnu" revision="adbb295a970c4b39dc487c95226fe84d2c460072" clone-depth="1"/>
