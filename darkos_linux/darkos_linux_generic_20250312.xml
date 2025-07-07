@@ -4,31 +4,29 @@
   <include name="remote.xml"/>
   
   <!-- Rockchip设备项目 -->
-  <project name="device_rockchip" path="device/rockchip" revision="77874dd8eb093c6548e121a7b93f72125c0ddbcd" dest-branch="master" clone-depth="1">
+  <project name="device_rockchip" path="device/rockchip" revision="21621334762f9436a27109b5566132b571228e74" dest-branch="master" clone-depth="1">
     <linkfile src="common/scripts/build.sh" dest="build.sh"/>
     <linkfile src="common/Makefile" dest="Makefile"/>
     <linkfile src="common/scripts/rkflash.sh" dest="rkflash.sh"/>
   </project>
   <!-- 内核 Linux-5.10 -->
-  <project name="kernel" path="kernel-5.10" revision="c3694b0a83c820d039f173af21db3cf44659274e" dest-branch="darkos-develop-5.10" clone-depth="1"/>
+  <project name="kernel" path="kernel-5.10" revision="1d93d5def26d49a05000fe123780168e5f37cd7b" dest-branch="darkos-develop-5.10" clone-depth="1"/>
 
   <!-- ARM GCC编译器项目 -->
   <project name="gcc-arm-10.3-2021.07-x86_64-aarch64-none-linux-gnu" path="prebuilts/gcc/linux-x86/aarch64/gcc-arm-10.3-2021.07-x86_64-aarch64-none-linux-gnu" revision="adbb295a970c4b39dc487c95226fe84d2c460072" clone-depth="1"/>
   <project name="gcc-arm-10.3-2021.07-x86_64-arm-none-linux-gnueabihf" path="prebuilts/gcc/linux-x86/arm/gcc-arm-10.3-2021.07-x86_64-arm-none-linux-gnueabihf" revision="2e89382ca3f8c34086272509ae4d7a5c340ffafc" clone-depth="1"/>
   
   <!-- RK二进制文件项目 -->
-  <project name="rkbin" revision="refs/tags/darkos-stan-rkr5" clone-depth="1"/>
-  
-  <!-- 工具项目 -->
-  <project name="tools" revision="refs/tags/darkos-stan-rkr5" clone-depth="1"/>
-  
+  <project name="rkbin" path="rkbin" revision="af448fdd6677b605d7abaa8315c703b12dfb5967" dest-branch="master" clone-depth="1"/>
+
   <!-- U-Boot引导加载程序项目 -->
-  <project name="u-boot" revision="refs/tags/darkos-stan-rkr5" clone-depth="1"/>
+  <project name="u-boot" path="u-boot" revision="fa087ee3fe71e7d836bc21329a56795211478197" dest-branch="darkos-stan-rkr5" clone-depth="1"/>
 
   <!-- Ubuntu22.04 文件系统 -->
-  <project name="ubuntu" path="ubuntu22.04" revision="d54806247ccc3db3230d234bb9d91ad4738ac3f0" dest-branch="ubuntu22.04" clone-depth="1"/>
+  <project name="ubuntu" path="ubuntu22.04" revision="9dec5e7181f71b0cacd33f3935a012838b657fd5" dest-branch="ubuntu22.04" clone-depth="1"/>
   
-
   <!-- <project name="ubuntu" path="ubuntu24.04" revision="d54806247ccc3db3230d234bb9d91ad4738ac3f0" dest-branch="ubuntu22.04" clone-depth="1"/> -->
 
+  <!-- 工具项目 -->
+  <!-- <project name="tools" revision="refs/tags/darkos-stan-rkr5" clone-depth="1"/> -->
 </manifest>
