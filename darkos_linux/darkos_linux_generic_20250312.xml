@@ -23,7 +23,7 @@
   <project name="u-boot" path="u-boot" revision="fa087ee3fe71e7d836bc21329a56795211478197" dest-branch="darkos-stan-rkr5" clone-depth="1"/>
 
   <!-- Ubuntu22.04 文件系统 -->
-  <project name="ubuntu" path="ubuntu22.04" revision="9dec5e7181f71b0cacd33f3935a012838b657fd5" dest-branch="ubuntu22.04" clone-depth="1"/>
+  <project name="ubuntu" path="ubuntu22.04" revision="1b89d6053ee5720e6ba1083dd77f01de87c5ec58" dest-branch="ubuntu22.04" clone-depth="1"/>
   
   <!-- <project name="ubuntu" path="ubuntu24.04" revision="d54806247ccc3db3230d234bb9d91ad4738ac3f0" dest-branch="ubuntu22.04" clone-depth="1"/> -->
 
